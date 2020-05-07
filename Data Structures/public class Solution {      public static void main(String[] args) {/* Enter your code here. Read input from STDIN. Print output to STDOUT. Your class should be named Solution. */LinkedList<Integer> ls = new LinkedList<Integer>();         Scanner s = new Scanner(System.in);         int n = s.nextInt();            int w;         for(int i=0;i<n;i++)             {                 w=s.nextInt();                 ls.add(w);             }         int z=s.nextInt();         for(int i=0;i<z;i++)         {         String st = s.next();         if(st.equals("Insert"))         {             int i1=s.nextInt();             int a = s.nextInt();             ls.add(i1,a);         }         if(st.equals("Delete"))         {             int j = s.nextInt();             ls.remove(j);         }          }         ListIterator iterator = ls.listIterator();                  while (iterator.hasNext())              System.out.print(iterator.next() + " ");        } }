@@ -1,0 +1,43 @@
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        LinkedList<Integer> ls = new LinkedList<Integer>();
+        
+        Scanner s = new Scanner(System.in);
+        
+        int n = s.nextInt();
+        int w;
+        
+        for(int i=0;i<n;i++)
+            {
+                w=s.nextInt();
+                ls.add(w);
+            }
+        
+        int z=s.nextInt();
+        
+        for(int i=0;i<z;i++)
+        {
+        String st = s.next();
+        if(st.equals("Insert"))
+        {
+            int i1=s.nextInt();
+            int a = s.nextInt();
+            ls.add(i1,a);
+        }
+        if(st.equals("Delete"))
+        {
+            int j = s.nextInt();
+            ls.remove(j);
+        }
+
+        }
+        ListIterator iterator = ls.listIterator(); 
+                while (iterator.hasNext()) 
+            System.out.print(iterator.next() + " "); 
+
+
+    }
+}
+
