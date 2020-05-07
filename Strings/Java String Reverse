@@ -1,0 +1,27 @@
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        
+        char a[] = A.toCharArray();
+        char p[] = new char[A.length()];
+        int j=A.length();
+        j--;
+
+        for(int i=0;i<A.length();i++)
+        {
+             p[j]=a[i];
+             j--;
+        }
+        String rev = new String(p);
+        if(A.equals(rev))
+        {
+            System.out.println("Yes");
+        }
+        else
+          System.out.println("No");
+        
+    }
+}
